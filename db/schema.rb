@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131028081433) do
+ActiveRecord::Schema.define(version: 20131028094051) do
 
   create_table "calculation_requests", force: true do |t|
     t.string   "package"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20131028081433) do
     t.string   "info"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "session_code"
   end
 
   create_table "ocpu_packages", force: true do |t|

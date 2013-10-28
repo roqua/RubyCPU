@@ -23,16 +23,16 @@ class OcpuService
     
     packages = RestClient.get [@service_location, OCPU_PATH, LIBRARY_PATH].join("/")
     
-    OcpuCallbackParser.parse result: packages, information: InformationEnum::ALL_PACKAGES
+    OcpuPackage.build_from_list packages
     
   end
   
   
   def calculate_and_retrieve calculation_request
     
-    result = calculate calculation_request
+    data = calculate calculation_request
     
-    retrieve_result result, ReturnTypeEnum::JSON
+    retrieve_result data, ReturnTypeEnum::JSON
   
   end
   
@@ -46,6 +46,8 @@ class OcpuService
 
     result = RestClient.post [@service_location, OCPU_PATH, LIBRARY_PATH, calculation_request.package, LANGUAGE, calculation_request.function].join('/'), calculation_request.data , :content_type => :json, :accept => :json
     
+    OcpuCallback.build_from_response result
+    
   end
   
   ##
@@ -54,15 +56,13 @@ class OcpuService
   # OpenCPU first wants to store the data locally, in order to improve caching.
   # When the call is performed, one gets a callback URL on which a get request 
   # should be performed. This is done in this method.
-  def retrieve_result session, datatype 
+  def retrieve_result session, return_type 
     
-    Rails.logger.debug session
+    result = "{}"
     
-    callback_url = OcpuCallbackParser.parse result: session , information: InformationEnum::VALUE_CALLBACK_URL
+    result = JSON.parse(RestClient.get [@service_location, session.value, return_type].join("/")) if session.is_a? OcpuCallback
     
-    Rails.logger.debug [@service_location,callback_url, datatype].join("/")
-    
-    JSON.parse(RestClient.get [@service_location,callback_url, datatype].join("/"))
+    result
     
   end
   

@@ -13,7 +13,7 @@ class PersonfitController < ApplicationController
   def create
     @calculation_request = CalculationRequest.new(calculation_request_params)
      if(@calculation_request.valid?) then
-       @result = @@OcpuService.calculate @calculation_request
+       @result = @@OcpuService.calculate_and_retrieve @calculation_request
        logger.info @result
        render :show
      else

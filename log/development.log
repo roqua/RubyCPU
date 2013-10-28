@@ -28823,3 +28823,427 @@ Migrating to CreateOcpuPackages (20131028081433)
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131028081433"]]
   [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-28 10:28:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+OpenCpu service Initialized
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+Completed 500 Internal Server Error in 2972ms
+
+NoMethodError (undefined method `each' for "abc":String):
+  app/services/ocpu_callback_parser.rb:58:in `parse_packages'
+  app/services/ocpu_callback_parser.rb:36:in `parse'
+  app/services/ocpu_callback_parser.rb:15:in `parse'
+  app/services/ocpu_service.rb:26:in `all_packages'
+  app/controllers/personfit_controller.rb:31:in `load_packages'
+  app/controllers/personfit_controller.rb:10:in `new'
+
+
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.5ms)
+
+
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-28 10:29:29 +0100
+OpenCpu service Initialized
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+Completed 500 Internal Server Error in 1536ms
+
+NoMethodError (undefined method `name=' for #<Class:0x007fb15eec81c0>):
+  app/services/ocpu_callback_parser.rb:60:in `block in parse_packages'
+  app/services/ocpu_callback_parser.rb:58:in `each'
+  app/services/ocpu_callback_parser.rb:58:in `parse_packages'
+  app/services/ocpu_callback_parser.rb:36:in `parse'
+  app/services/ocpu_callback_parser.rb:15:in `parse'
+  app/services/ocpu_service.rb:26:in `all_packages'
+  app/controllers/personfit_controller.rb:31:in `load_packages'
+  app/controllers/personfit_controller.rb:10:in `new'
+
+
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-28 10:29:48 +0100
+OpenCpu service Initialized
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+  Rendered personfit/new.html.erb within layouts/application (84.3ms)
+Completed 200 OK in 1737ms (Views: 145.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-28 10:29:50 +0100
+
+
+Started GET "/assets/personfit.css?body=1" for 127.0.0.1 at 2013-10-28 10:29:50 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:29:50 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:29:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-28 10:29:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-28 10:29:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-28 10:29:50 +0100
+
+
+Started GET "/assets/personfit.js?body=1" for 127.0.0.1 at 2013-10-28 10:29:50 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-28 10:29:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-28 10:29:50 +0100
+
+
+Started POST "/personfit" for 127.0.0.1 at 2013-10-28 10:30:09 +0100
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PkjLL2bRIlXAJpgT1QpdoXkHbqfGS7gYU1YqUe09QdA=", "calculation_request"=>{"package"=>"stats", "function"=>"rnorm", "data"=>"{\"n\":100}"}, "commit"=>"Save Calculation request"}
+/ocpu/tmp/x0a9ce49b/R/.val
+/ocpu/tmp/x0a9ce49b/stdout
+/ocpu/tmp/x0a9ce49b/source
+/ocpu/tmp/x0a9ce49b/console
+/ocpu/tmp/x0a9ce49b/info
+
+  Rendered personfit/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 1041ms
+
+ActionView::Template::Error (undefined method `each' for #<String:0x007fb15edb23d0>):
+    1: <table class="table table-striped">
+    2:   <%@result.each do |res|%>
+    3:     <tr><td><%=res%></td></tr>
+    4:   <%end%>
+    5: </table>
+  app/views/personfit/show.html.erb:2:in `_app_views_personfit_show_html_erb__3310365479544975023_70199888698380'
+  app/controllers/personfit_controller.rb:18:in `create'
+
+
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started POST "/personfit" for 127.0.0.1 at 2013-10-28 10:33:56 +0100
+OpenCpu service Initialized
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PkjLL2bRIlXAJpgT1QpdoXkHbqfGS7gYU1YqUe09QdA=", "calculation_request"=>{"package"=>"stats", "function"=>"rnorm", "data"=>"{\"n\":100}"}, "commit"=>"Save Calculation request"}
+/ocpu/tmp/x0a9ce49b/R/.val
+/ocpu/tmp/x0a9ce49b/stdout
+/ocpu/tmp/x0a9ce49b/source
+/ocpu/tmp/x0a9ce49b/console
+/ocpu/tmp/x0a9ce49b/info
+
+https://public.opencpu.org//json
+Completed 500 Internal Server Error in 2799ms
+
+RestClient::ResourceNotFound (404 Resource Not Found):
+  app/services/ocpu_service.rb:65:in `retrieve_result'
+  app/services/ocpu_service.rb:35:in `calculate_and_retrieve'
+  app/controllers/personfit_controller.rb:16:in `create'
+
+
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.7ms)
+
+
+Started POST "/personfit" for 127.0.0.1 at 2013-10-28 10:36:20 +0100
+OpenCpu service Initialized
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PkjLL2bRIlXAJpgT1QpdoXkHbqfGS7gYU1YqUe09QdA=", "calculation_request"=>{"package"=>"stats", "function"=>"rnorm", "data"=>"{\"n\":100}"}, "commit"=>"Save Calculation request"}
+/ocpu/tmp/x079e0ec8/R/.val
+/ocpu/tmp/x079e0ec8/stdout
+/ocpu/tmp/x079e0ec8/source
+/ocpu/tmp/x079e0ec8/console
+/ocpu/tmp/x079e0ec8/info
+
+/ocpu/tmp/x079e0ec8/R/.val
+/ocpu/tmp/x079e0ec8/stdout
+/ocpu/tmp/x079e0ec8/source
+/ocpu/tmp/x079e0ec8/console
+/ocpu/tmp/x079e0ec8/info
+
+https://public.opencpu.org//json
+Completed 500 Internal Server Error in 1912ms
+
+RestClient::ResourceNotFound (404 Resource Not Found):
+  app/services/ocpu_service.rb:67:in `retrieve_result'
+  app/services/ocpu_service.rb:37:in `calculate_and_retrieve'
+  app/controllers/personfit_controller.rb:16:in `create'
+
+
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSessionCodeToOcpuCallback (20131028094051)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "ocpu_callbacks" ADD "session_code" varchar(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131028094051"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/personfit" for 127.0.0.1 at 2013-10-28 10:44:52 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+OpenCpu service Initialized
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PkjLL2bRIlXAJpgT1QpdoXkHbqfGS7gYU1YqUe09QdA=", "calculation_request"=>{"package"=>"stats", "function"=>"rnorm", "data"=>"{\"n\":100}"}, "commit"=>"Save Calculation request"}
+#<OcpuCallback:0x007fb15c7547b0>
+https://public.opencpu.org//ocpu/tmp/x0a88ca04/R/.val/json
+Completed 500 Internal Server Error in 1637ms
+
+NameError (undefined local variable or method `callback_url' for #<OcpuService:0x007fb1628cb2f0>):
+  app/services/ocpu_service.rb:65:in `retrieve_result'
+  app/services/ocpu_service.rb:35:in `calculate_and_retrieve'
+  app/controllers/personfit_controller.rb:16:in `create'
+
+
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started POST "/personfit" for 127.0.0.1 at 2013-10-28 10:45:12 +0100
+OpenCpu service Initialized
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PkjLL2bRIlXAJpgT1QpdoXkHbqfGS7gYU1YqUe09QdA=", "calculation_request"=>{"package"=>"stats", "function"=>"rnorm", "data"=>"{\"n\":100}"}, "commit"=>"Save Calculation request"}
+#<OcpuCallback:0x007fb15ef7a6e0>
+https://public.opencpu.org//ocpu/tmp/x0a88ca04/R/.val/json
+[-0.13204, 1.3387, -0.66234, 0.16226, 0.26254, 0.58624, -1.084, -1.1397, 0.81127, -0.40187, 1.0027, -0.13965, 0.080835, 1.814, 0.93242, 0.28123, 1.1553, -0.84037, -0.86898, 0.34151, 0.5253, -0.047778, 2.0605, 1.5988, 1.2355, -1.2466, 0.43667, -0.51555, -0.60149, 1.0615, -0.76249, -1.5247, -0.61835, 0.56316, -0.17673, 0.42266, 2.2599, 0.45432, -1.7027, 0.62379, -2.25, -1.3438, -0.48157, -0.4488, -0.20859, -0.4388, 0.96225, 0.93652, -1.1942, -0.28348, -0.72707, -0.20987, -1.0986, -1.0675, 0.2242, 1.0929, 0.16624, -0.7902, -0.26838, -0.72526, -0.13048, -1.2931, 0.39778, 0.0039185, 0.906, 0.85089, -1.1259, 1.6839, -0.25624, -1.4063, 0.090621, 0.9795, 0.054954, 0.48362, -0.52416, 0.18501, -0.24664, -0.39429, 0.5844, -0.94241, -0.56954, 0.5288, 1.5383, -0.47503, 0.64923, 1.6862, 0.6573, 0.19931, -0.73715, 0.43484, -0.37631, -0.34644, 0.4567, -1.2095, 1.2053, 1.0687, -0.32213, 0.60999, 0.11494, -0.026816]
+  Rendered personfit/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1656ms (Views: 8.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-28 10:45:14 +0100
+
+
+Started GET "/assets/personfit.css?body=1" for 127.0.0.1 at 2013-10-28 10:45:14 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:45:14 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:45:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-28 10:45:14 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-28 10:45:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-28 10:45:14 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-28 10:45:14 +0100
+
+
+Started GET "/assets/personfit.js?body=1" for 127.0.0.1 at 2013-10-28 10:45:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-28 10:45:14 +0100
+
+
+Started POST "/personfit" for 127.0.0.1 at 2013-10-28 10:47:43 +0100
+OpenCpu service Initialized
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PkjLL2bRIlXAJpgT1QpdoXkHbqfGS7gYU1YqUe09QdA=", "calculation_request"=>{"package"=>"stats", "function"=>"rnorm", "data"=>"{\"n\":100}"}, "commit"=>"Save Calculation request"}
+[-0.13204, 1.3387, -0.66234, 0.16226, 0.26254, 0.58624, -1.084, -1.1397, 0.81127, -0.40187, 1.0027, -0.13965, 0.080835, 1.814, 0.93242, 0.28123, 1.1553, -0.84037, -0.86898, 0.34151, 0.5253, -0.047778, 2.0605, 1.5988, 1.2355, -1.2466, 0.43667, -0.51555, -0.60149, 1.0615, -0.76249, -1.5247, -0.61835, 0.56316, -0.17673, 0.42266, 2.2599, 0.45432, -1.7027, 0.62379, -2.25, -1.3438, -0.48157, -0.4488, -0.20859, -0.4388, 0.96225, 0.93652, -1.1942, -0.28348, -0.72707, -0.20987, -1.0986, -1.0675, 0.2242, 1.0929, 0.16624, -0.7902, -0.26838, -0.72526, -0.13048, -1.2931, 0.39778, 0.0039185, 0.906, 0.85089, -1.1259, 1.6839, -0.25624, -1.4063, 0.090621, 0.9795, 0.054954, 0.48362, -0.52416, 0.18501, -0.24664, -0.39429, 0.5844, -0.94241, -0.56954, 0.5288, 1.5383, -0.47503, 0.64923, 1.6862, 0.6573, 0.19931, -0.73715, 0.43484, -0.37631, -0.34644, 0.4567, -1.2095, 1.2053, 1.0687, -0.32213, 0.60999, 0.11494, -0.026816]
+  Rendered personfit/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1639ms (Views: 8.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-28 10:47:45 +0100
+
+
+Started GET "/assets/personfit.css?body=1" for 127.0.0.1 at 2013-10-28 10:47:45 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:47:45 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:47:45 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-28 10:47:45 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-28 10:47:45 +0100
+
+
+Started GET "/assets/personfit.js?body=1" for 127.0.0.1 at 2013-10-28 10:47:45 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-28 10:47:45 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-28 10:47:45 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-28 10:47:45 +0100
+
+
+Started POST "/personfit" for 127.0.0.1 at 2013-10-28 10:47:55 +0100
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PkjLL2bRIlXAJpgT1QpdoXkHbqfGS7gYU1YqUe09QdA=", "calculation_request"=>{"package"=>"stats", "function"=>"rnorm", "data"=>"{}"}, "commit"=>"Save Calculation request"}
+Completed 500 Internal Server Error in 1008ms
+
+RestClient::BadRequest (400 Bad Request):
+  app/services/ocpu_service.rb:47:in `calculate'
+  app/services/ocpu_service.rb:33:in `calculate_and_retrieve'
+  app/controllers/personfit_controller.rb:16:in `create'
+
+
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started POST "/personfit" for 127.0.0.1 at 2013-10-28 10:48:03 +0100
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PkjLL2bRIlXAJpgT1QpdoXkHbqfGS7gYU1YqUe09QdA=", "calculation_request"=>{"package"=>"stats", "function"=>"rnorm", "data"=>"{\"n\":100}"}, "commit"=>"Save Calculation request"}
+[-0.13204, 1.3387, -0.66234, 0.16226, 0.26254, 0.58624, -1.084, -1.1397, 0.81127, -0.40187, 1.0027, -0.13965, 0.080835, 1.814, 0.93242, 0.28123, 1.1553, -0.84037, -0.86898, 0.34151, 0.5253, -0.047778, 2.0605, 1.5988, 1.2355, -1.2466, 0.43667, -0.51555, -0.60149, 1.0615, -0.76249, -1.5247, -0.61835, 0.56316, -0.17673, 0.42266, 2.2599, 0.45432, -1.7027, 0.62379, -2.25, -1.3438, -0.48157, -0.4488, -0.20859, -0.4388, 0.96225, 0.93652, -1.1942, -0.28348, -0.72707, -0.20987, -1.0986, -1.0675, 0.2242, 1.0929, 0.16624, -0.7902, -0.26838, -0.72526, -0.13048, -1.2931, 0.39778, 0.0039185, 0.906, 0.85089, -1.1259, 1.6839, -0.25624, -1.4063, 0.090621, 0.9795, 0.054954, 0.48362, -0.52416, 0.18501, -0.24664, -0.39429, 0.5844, -0.94241, -0.56954, 0.5288, 1.5383, -0.47503, 0.64923, 1.6862, 0.6573, 0.19931, -0.73715, 0.43484, -0.37631, -0.34644, 0.4567, -1.2095, 1.2053, 1.0687, -0.32213, 0.60999, 0.11494, -0.026816]
+  Rendered personfit/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1590ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-28 10:48:05 +0100
+
+
+Started GET "/assets/personfit.css?body=1" for 127.0.0.1 at 2013-10-28 10:48:05 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:48:05 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:48:05 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-28 10:48:05 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-28 10:48:05 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-28 10:48:05 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-28 10:48:05 +0100
+
+
+Started GET "/assets/personfit.js?body=1" for 127.0.0.1 at 2013-10-28 10:48:05 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-28 10:48:05 +0100
+
+
+Started POST "/personfit" for 127.0.0.1 at 2013-10-28 10:51:51 +0100
+OpenCpu service Initialized
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PkjLL2bRIlXAJpgT1QpdoXkHbqfGS7gYU1YqUe09QdA=", "calculation_request"=>{"package"=>"stats", "function"=>"rnorm", "data"=>"{\"n\":100}"}, "commit"=>"Save Calculation request"}
+[-0.24911, 1.4046, -0.82817, -0.33901, 0.34655, -1.4449, 0.66552, -1.3248, 0.62421, 0.075849, 0.62772, 1.5235, 0.49189, -0.56336, -0.75627, 0.88521, -0.4736, -1.0171, 1.015, -0.81818, 0.93558, 1.7094, 0.38448, 1.3057, -0.36154, -0.18968, -0.21491, -3.036, -0.46689, -1.3841, 0.16136, 0.43089, -0.38675, 0.44995, 0.70086, -0.10718, -0.097524, 0.98422, 0.045324, 1.4719, 0.32368, -0.27173, -0.59736, 1.8427, -1.502, 2.7094, 2.1203, 1.0215, -0.98397, -1.1924, 0.025169, 0.45547, -0.17939, -0.53309, 0.26632, 0.81739, 0.96865, -1.4188, -1.0051, -1.1555, -1.0044, -0.85886, -1.4887, -0.71432, 0.48724, 0.32796, -0.51464, 0.67447, 0.64469, 1.0167, 1.9147, 0.30848, -2.1065, 0.086094, 0.55426, -0.031272, 0.59066, 0.51217, 0.70007, -0.75361, -0.14176, -0.16425, 0.22763, 0.93575, 0.22607, 0.51974, 0.52914, -0.34418, -0.33827, -0.93299, -0.24313, -0.76931, -0.15082, 2.9213, -0.32761, 0.14573, -0.13444, 1.1716, -1.7085, 1.692]
+  Rendered personfit/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2565ms (Views: 5.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-28 10:51:54 +0100
+
+
+Started GET "/assets/personfit.css?body=1" for 127.0.0.1 at 2013-10-28 10:51:54 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:51:54 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:51:54 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-28 10:51:54 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-28 10:51:54 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-28 10:51:54 +0100
+
+
+Started GET "/assets/personfit.js?body=1" for 127.0.0.1 at 2013-10-28 10:51:54 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-28 10:51:54 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-28 10:51:54 +0100
+
+
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-28 10:53:53 +0100
+OpenCpu service Initialized
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+Completed 500 Internal Server Error in 1548ms
+
+NameError (uninitialized constant OcpuService::OcpuPackages):
+  app/services/ocpu_service.rb:26:in `all_packages'
+  app/controllers/personfit_controller.rb:31:in `load_packages'
+  app/controllers/personfit_controller.rb:10:in `new'
+
+
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/frbl/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-28 10:54:08 +0100
+OpenCpu service Initialized
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+  Rendered personfit/new.html.erb within layouts/application (65.8ms)
+Completed 200 OK in 1613ms (Views: 72.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-28 10:54:10 +0100
+
+
+Started GET "/assets/personfit.css?body=1" for 127.0.0.1 at 2013-10-28 10:54:10 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:54:10 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-10-28 10:54:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-28 10:54:10 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-28 10:54:10 +0100
+
+
+Started GET "/assets/personfit.js?body=1" for 127.0.0.1 at 2013-10-28 10:54:10 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-28 10:54:10 +0100
+
+
+Started GET "/assets/bootstrap/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-28 10:54:10 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-28 10:54:10 +0100

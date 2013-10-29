@@ -17,9 +17,6 @@ class PersonfitController < ApplicationController
        logger.info @result
        render :show
      else
-       @calculation_request.errors.full_messages.each do |msg|
-         logger.debug("#{msg} !!!!!!!!!!!!!!!!!!!")
-       end
        load_packages
        render :new
      end

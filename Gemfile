@@ -32,6 +32,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Test env
+group :development, :test do
+  gem 'capybara', '~> 2.1.0'
+  gem 'rspec-rails', '~> 2.0'
+end
+
 # Allow the use of the restclient
 gem "rest-client", "~> 1.6.7"
 

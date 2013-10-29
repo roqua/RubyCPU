@@ -17,6 +17,8 @@ class OcpuService
     
   end
   
+  ##
+  # Returns a list of package objects, retrieved from the OpenCPU server
   def all_packages
     
     Rails.logger.debug([@service_location, OCPU_PATH, LIBRARY_PATH].join("/"))

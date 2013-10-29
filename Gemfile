@@ -34,7 +34,9 @@ end
 
 # Test env
 group :development, :test do
+  gem 'coveralls', require: false
   gem 'capybara', '~> 2.1.0'
+  gem 'capybara-screenshot'
   gem 'rspec-rails', '~> 2.0'
 end
 

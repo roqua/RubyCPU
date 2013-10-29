@@ -2,8 +2,13 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'capybara/rspec'
+require 'capybara-screenshot/rspec'
 require 'rspec/rails'
 require 'rspec/autorun'
+
+# Setup coveralls
+require 'coveralls'
+Coveralls.wear!
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.

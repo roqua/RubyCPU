@@ -1300,3 +1300,275 @@ OpenCpu service Initialized
 OpenCpu service Initialized
 https://public.opencpu.org/ocpu/library
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+OpenCpu service Initialized
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PersonfitController#index as HTML
+  Rendered personfit/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PersonfitController#index as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (33.2ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:37:34 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:37:34 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2013-10-29 11:37:34 +0100
+Processing by PersonfitController#index as HTML
+Completed 200 OK in 48ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-29 11:37:34 +0100
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+Completed 200 OK in 1645ms (Views: 68.8ms | ActiveRecord: 0.3ms)
+Started POST "/personfit" for 127.0.0.1 at 2013-10-29 11:37:36 +0100
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "calculation_request"=>{"package"=>"stats", "function"=>"cor", "data"=>"{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"}, "commit"=>"Save Calculation request"}
+[0.32733]
+Completed 200 OK in 1959ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 10:37:38 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:37:38 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2013-10-29 11:37:38 +0100
+Processing by PersonfitController#index as HTML
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-29 11:37:38 +0100
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+Completed 200 OK in 1647ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+Started POST "/personfit" for 127.0.0.1 at 2013-10-29 11:37:40 +0100
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "calculation_request"=>{"package"=>"stats", "function"=>"cor", "data"=>"this is not json"}, "commit"=>"Save Calculation request"}
+https://public.opencpu.org/ocpu/library
+Completed 200 OK in 1584ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:37:42 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:37:42 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2013-10-29 11:37:42 +0100
+Processing by PersonfitController#index as HTML
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-29 11:37:42 +0100
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+Completed 200 OK in 1610ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+Started POST "/personfit" for 127.0.0.1 at 2013-10-29 11:37:44 +0100
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "calculation_request"=>{"package"=>"", "function"=>"", "data"=>""}, "commit"=>"Save Calculation request"}
+https://public.opencpu.org/ocpu/library
+Completed 200 OK in 1620ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+OpenCpu service Initialized
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+OpenCpu service Initialized
+https://public.opencpu.org/ocpu/library
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+OpenCpu service Initialized
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PersonfitController#index as HTML
+  Rendered personfit/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PersonfitController#index as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (32.9ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:45:52 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:45:52 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2013-10-29 11:45:52 +0100
+Processing by PersonfitController#index as HTML
+Completed 200 OK in 50ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-29 11:45:52 +0100
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+Completed 200 OK in 2033ms (Views: 72.4ms | ActiveRecord: 0.4ms)
+Started POST "/personfit" for 127.0.0.1 at 2013-10-29 11:45:54 +0100
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "calculation_request"=>{"package"=>"stats", "function"=>"cor", "data"=>"{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"}, "commit"=>"Save Calculation request"}
+[0.32733]
+Completed 200 OK in 1938ms (Views: 6.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 10:45:56 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:45:56 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2013-10-29 11:45:56 +0100
+Processing by PersonfitController#index as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-29 11:45:56 +0100
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+Completed 200 OK in 1574ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+Started POST "/personfit" for 127.0.0.1 at 2013-10-29 11:45:58 +0100
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "calculation_request"=>{"package"=>"stats", "function"=>"cor", "data"=>"this is not json"}, "commit"=>"Save Calculation request"}
+https://public.opencpu.org/ocpu/library
+Completed 200 OK in 1560ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:46:00 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:46:00 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2013-10-29 11:46:00 +0100
+Processing by PersonfitController#index as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Started GET "/personfit/new" for 127.0.0.1 at 2013-10-29 11:46:00 +0100
+Processing by PersonfitController#new as HTML
+https://public.opencpu.org/ocpu/library
+Completed 200 OK in 1500ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+Started POST "/personfit" for 127.0.0.1 at 2013-10-29 11:46:01 +0100
+Processing by PersonfitController#create as HTML
+  Parameters: {"utf8"=>"✓", "calculation_request"=>{"package"=>"", "function"=>"", "data"=>""}, "commit"=>"Save Calculation request"}
+https://public.opencpu.org/ocpu/library
+Completed 200 OK in 1560ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+OpenCpu service Initialized
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+OpenCpu service Initialized
+https://public.opencpu.org/ocpu/library
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+OpenCpu service Initialized
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:48:06 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:48:06 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+OpenCpu service Initialized
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 10:48:06 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:48:06 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+OpenCpu service Initialized
+https://public.opencpu.org/ocpu/library
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:48:07 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:48:07 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+OpenCpu service Initialized
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:53:55 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:53:55 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+OpenCpu service Initialized
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 10:53:55 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:53:55 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+OpenCpu service Initialized
+https://public.opencpu.org/ocpu/library
+  [1m[36m (2.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:53:57 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:53:57 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+OpenCpu service Initialized
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 10:53:57 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:53:57 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+OpenCpu service Initialized
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:54:14 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:54:14 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+OpenCpu service Initialized
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 10:54:14 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:54:14 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+OpenCpu service Initialized
+  [1m[36m (1.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:54:15 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:54:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+OpenCpu service Initialized
+https://public.opencpu.org/ocpu/library
+  [1m[35m (2.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 10:54:16 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:54:16 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+OpenCpu service Initialized
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:54:25 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:54:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+OpenCpu service Initialized
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 10:54:25 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:54:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+OpenCpu service Initialized
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 10:54:26 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:54:26 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+OpenCpu service Initialized
+https://public.opencpu.org/ocpu/library
+  [1m[35m (2.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 10:54:28 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 10:54:28 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+OpenCpu service Initialized
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 13:21:59 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 13:21:59 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+OpenCpu service Initialized
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 13:21:59 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 13:21:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+OpenCpu service Initialized
+https://public.opencpu.org/ocpu/library
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 29 Oct 2013 13:22:01 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 13:22:01 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+OpenCpu service Initialized
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "calculation_requests" ("created_at", "data", "function", "package", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Oct 2013 13:22:03 UTC +00:00], ["data", "{\"x\":[1,4,2,3,5,3], \"y\":[1,6,7,5,4,3]}"], ["function", "cor"], ["package", "stats"], ["updated_at", Tue, 29 Oct 2013 13:22:03 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+OpenCpu service Initialized
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m

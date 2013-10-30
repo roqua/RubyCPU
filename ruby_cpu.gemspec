@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
 	s.test_files  = Dir.glob("spec/**/*.rb")
   s.homepage    = 'http://frbl.eu'
   s.license     = 'none'
-	s.add_development_dependency 'rspec', '~> 2.14'
-	s.add_development_dependency 'rake', '>= 0.9'
+	s.add_development_dependency 'rspec', '~> 2.0'
+	s.add_development_dependency 'coveralls'
+	s.add_development_dependency 'rake'
 end

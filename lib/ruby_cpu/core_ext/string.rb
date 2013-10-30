@@ -1,0 +1,1 @@
+require 'ruby_cpu/core_ext/string/trim'

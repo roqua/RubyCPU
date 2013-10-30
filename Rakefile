@@ -1,6 +1,5 @@
-# Add your own tasks in files placed in lib/tasks ending in .rake,
-# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new('spec')
 
-require File.expand_path('../config/application', __FILE__)
-
-RubyCPU::Application.load_tasks
+desc "Run specs"
+task :default => :spec

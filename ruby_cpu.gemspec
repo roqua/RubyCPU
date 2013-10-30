@@ -12,4 +12,5 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://frbl.eu'
   s.license     = 'none'
 	s.add_development_dependency 'rspec', '~> 2.14'
+	s.add_development_dependency 'rake', '>= 0.9'
 end

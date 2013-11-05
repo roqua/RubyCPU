@@ -2,6 +2,8 @@
 require 'rspec'
 require 'rspec/autorun'
 require 'ruby_cpu'
+require 'vcr'
+
 
 # Setup coveralls
 require 'coveralls'
@@ -24,4 +26,10 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+end
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'fixtures/vcr_cassettes'
+  c.hook_into :webmock # or :fakeweb
+  c.configure_rspec_metadata!
 end

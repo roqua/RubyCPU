@@ -15,6 +15,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'virtus', '~> 1.0'
 
 	s.add_development_dependency 'rspec', '>= 2.14.1'
+  s.add_development_dependency 'vcr',   '~> 2.7'
+  s.add_development_dependency 'webmock'
 	s.add_development_dependency 'coveralls'
   s.add_development_dependency 'rubocop'
 end

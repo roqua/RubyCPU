@@ -1,0 +1,340 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://public.opencpu.org/ocpu/library/stats
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - nginx/1.2.6 (Ubuntu)
+      Date:
+      - Tue, 05 Nov 2013 10:22:12 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=86400, public
+      Location:
+      - /ocpu/library/stats/
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Location, X-ocpu-session, Content-Type
+      X-Ocpu-R:
+      - R version 3.0.2 (2013-09-25)
+      X-Ocpu-Locale:
+      - en_US.UTF-8
+      X-Ocpu-Time:
+      - '2013-11-05 01:58:37 PST'
+      X-Ocpu-Version:
+      - 1.0.5
+      X-Ocpu-Server:
+      - rApache
+    body:
+      encoding: UTF-8
+      string: |
+        Redirect to /ocpu/library/stats/
+    http_version: 
+  recorded_at: Tue, 05 Nov 2013 10:22:12 GMT
+- request:
+    method: get
+    uri: https://public.opencpu.org/ocpu/library/stats/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.6 (Ubuntu)
+      Date:
+      - Tue, 05 Nov 2013 10:22:13 GMT
+      Content-Type:
+      - text/plain; charset="UTF-8"
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=86400, public
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Headers:
+      - Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Location, X-ocpu-session, Content-Type
+      X-Ocpu-R:
+      - R version 3.0.2 (2013-09-25)
+      X-Ocpu-Locale:
+      - en_US.UTF-8
+      X-Ocpu-Time:
+      - '2013-11-05 01:58:38 PST'
+      X-Ocpu-Version:
+      - 1.0.5
+      X-Ocpu-Server:
+      - rApache
+    body:
+      encoding: UTF-8
+      string: "\n\t\tInformation on package 'stats'\n\nDescription:\n\nPackage:       stats\nVersion:
+        \      3.0.2\nPriority:      base\nTitle:         The R Stats Package\nAuthor:
+        \       R Core Team and contributors worldwide\nMaintainer:    R Core Team
+        <R-core@r-project.org>\nDescription:   R statistical functions\nLicense:       Part
+        of R 3.0.2\nBuilt:         R 3.0.2; x86_64-pc-linux-gnu; 2013-09-27 12:34:32
+        UTC;\n               unix\n\nIndex:\n\n.checkMFClasses         Functions to
+        Check the Type of Variables passed\n                        to Model Frames\nAIC
+        \                    Akaike's An Information Criterion\nARMAacf                 Compute
+        Theoretical ACF for an ARMA Process\nARMAtoMA                Convert ARMA
+        Process to Infinite MA Process\nBeta                    The Beta Distribution\nBinomial
+        \               The Binomial Distribution\nBox.test                Box-Pierce
+        and Ljung-Box Tests\nC                       Sets Contrasts for a Factor\nCauchy
+        \                 The Cauchy Distribution\nChisquare               The (non-central)
+        Chi-Squared Distribution\nDistributions           Distributions in the stats
+        package\nExponential             The Exponential Distribution\nFDist                   The
+        F Distribution\nGammaDist               The Gamma Distribution\nGeometric
+        \              The Geometric Distribution\nHoltWinters             Holt-Winters
+        Filtering\nHypergeometric          The Hypergeometric Distribution\nIQR                     The
+        Interquartile Range\nKalmanLike              Kalman Filtering\nLogistic                The
+        Logistic Distribution\nLognormal               The Log Normal Distribution\nMultinomial
+        \            The Multinomial Distribution\nNLSstAsymptotic         Fit the
+        Asymptotic Regression Model\nNLSstClosestX           Inverse Interpolation\nNLSstLfAsymptote
+        \       Horizontal Asymptote on the Left Side\nNLSstRtAsymptote        Horizontal
+        Asymptote on the Right Side\nNegBinomial             The Negative Binomial
+        Distribution\nNormal                  The Normal Distribution\nPP.test                 Phillips-Perron
+        Test for Unit Roots\nPoisson                 The Poisson Distribution\nSSD
+        \                    SSD Matrix and Estimated Variance Matrix in\n                        Multivariate
+        Models\nSSasymp                 Self-Starting Nls Asymptotic Regression Model\nSSasympOff
+        \             Self-Starting Nls Asymptotic Regression Model\n                        with
+        an Offset\nSSasympOrig             Self-Starting Nls Asymptotic Regression
+        Model\n                        through the Origin\nSSbiexp                 Self-Starting
+        Nls Biexponential model\nSSfol                   Self-Starting Nls First-order
+        Compartment Model\nSSfpl                   Self-Starting Nls Four-Parameter
+        Logistic Model\nSSgompertz              Self-Starting Nls Gompertz Growth
+        Model\nSSlogis                 Self-Starting Nls Logistic Model\nSSmicmen
+        \               Self-Starting Nls Michaelis-Menten Model\nSSweibull               Self-Starting
+        Nls Weibull Growth Curve Model\nSignRank                Distribution of the
+        Wilcoxon Signed Rank\n                        Statistic\nStructTS                Fit
+        Structural Time Series\nTDist                   The Student t Distribution\nTukey
+        \                  The Studentized Range Distribution\nTukeyHSD                Compute
+        Tukey Honest Significant Differences\nUniform                 The Uniform
+        Distribution\nWeibull                 The Weibull Distribution\nWilcoxon                Distribution
+        of the Wilcoxon Rank Sum Statistic\nacf                     Auto- and Cross-
+        Covariance and -Correlation\n                        Function Estimation\nacf2AR
+        \                 Compute an AR Process Exactly Fitting an ACF\nadd1                    Add
+        or Drop All Possible Single Terms to a\n                        Model\naddmargins
+        \             Puts Arbitrary Margins on Multidimensional\n                        Tables
+        or Arrays\naggregate               Compute Summary Statistics of Data Subsets\nalias
+        \                  Find Aliases (Dependencies) in a Model\nanova                   Anova
+        Tables\nanova.glm               Analysis of Deviance for Generalized Linear\n
+        \                       Model Fits\nanova.lm                ANOVA for Linear
+        Model Fits\nanova.mlm               Comparisons between Multivariate Linear
+        Models\nansari.test             Ansari-Bradley Test\naov                     Fit
+        an Analysis of Variance Model\napproxfun               Interpolation Functions\nar
+        \                     Fit Autoregressive Models to Time Series\nar.ols                  Fit
+        Autoregressive Models to Time Series by OLS\narima                   ARIMA
+        Modelling of Time Series\narima.sim               Simulate from an ARIMA Model\narima0
+        \                 ARIMA Modelling of Time Series - Preliminary\n                        Version\nas.hclust
+        \              Convert Objects to Class hclust\nasOneSidedFormula       Convert
+        to One-Sided Formula\nave                     Group Averages Over Level Combinations
+        of\n                        Factors\nbartlett.test           Bartlett Test
+        of Homogeneity of Variances\nbinom.test              Exact Binomial Test\nbiplot
+        \                 Biplot of Multivariate Data\nbiplot.princomp         Biplot
+        for Principal Components\nbw.nrd0                 Bandwidth Selectors for
+        Kernel Density\n                        Estimation\ncancor                  Canonical
+        Correlations\ncase.names              Case and Variable Names of Fitted Models\nchisq.test
+        \             Pearson's Chi-squared Test for Count Data\ncmdscale                Classical
+        (Metric) Multidimensional Scaling\ncoef                    Extract Model Coefficients\ncomplete.cases
+        \         Find Complete Cases\nconfint                 Confidence Intervals
+        for Model Parameters\nconstrOptim             Linearly Constrained Optimization\ncontr.helmert
+        \          (Possibly Sparse) Contrast Matrices\ncontrasts               Get
+        and Set Contrast Matrices\nconvolve                Convolution of Sequences
+        via FFT\ncophenetic              Cophenetic Distances for a Hierarchical\n
+        \                       Clustering\ncor                     Correlation, Variance
+        and Covariance (Matrices)\ncor.test                Test for Association/Correlation
+        Between Paired\n                        Samples\ncov.wt                  Weighted
+        Covariance Matrices\ncpgram                  Plot Cumulative Periodogram\ncutree
+        \                 Cut a Tree into Groups of Data\ndecompose               Classical
+        Seasonal Decomposition by Moving\n                        Averages\ndelete.response
+        \        Modify Terms Objects\ndendrapply              Apply a Function to
+        All Nodes of a Dendrogram\ndendrogram              General Tree Structures\ndensity
+        \                Kernel Density Estimation\nderiv                   Symbolic
+        and Algorithmic Derivatives of Simple\n                        Expressions\ndeviance
+        \               Model Deviance\ndf.residual             Residual Degrees-of-Freedom\ndiff.ts
+        \                Methods for Time Series Objects\ndiffinv                 Discrete
+        Integration: Inverse of Differencing\ndist                    Distance Matrix
+        Computation\ndummy.coef              Extract Coefficients in Original Coding\necdf
+        \                   Empirical Cumulative Distribution Function\neff.aovlist
+        \            Compute Efficiencies of Multistratum Analysis\n                        of
+        Variance\neffects                 Effects from Fitted Model\nembed                   Embedding
+        a Time Series\nexpand.model.frame      Add new variables to a model frame\nextractAIC
+        \             Extract AIC from a Fitted Model\nfactanal                Factor
+        Analysis\nfactor.scope            Compute Allowed Changes in Adding to or\n
+        \                       Dropping from a Formula\nfamily                  Family
+        Objects for Models\nfamily.glm              Accessing Generalized Linear Model
+        Fits\nfamily.lm               Accessing Linear Model Fits\nfft                     Fast
+        Discrete Fourier Transform\nfilter                  Linear Filtering on a
+        Time Series\nfisher.test             Fisher's Exact Test for Count Data\nfitted
+        \                 Extract Model Fitted Values\nfivenum                 Tukey
+        Five-Number Summaries\nfligner.test            Fligner-Killeen Test of Homogeneity
+        of\n                        Variances\nformula                 Model Formulae\nformula.nls
+        \            Extract Model Formula from nls Object\nfriedman.test           Friedman
+        Rank Sum Test\nftable                  Flat Contingency Tables\nftable.formula
+        \         Formula Notation for Flat Contingency Tables\ngetInitial              Get
+        Initial Parameter Estimates\nglm                     Fitting Generalized Linear
+        Models\nglm.control             Auxiliary for Controlling GLM Fitting\nhclust
+        \                 Hierarchical Clustering\nheatmap                 Draw a
+        Heat Map\nidentify.hclust         Identify Clusters in a Dendrogram\ninfluence.measures
+        \     Regression Deletion Diagnostics\nintegrate               Integration
+        of One-Dimensional Functions\ninteraction.plot        Two-way Interaction
+        Plot\nis.empty.model          Test if a Model's Formula is Empty\nisoreg                  Isotonic
+        / Monotone Regression\nkernapply               Apply Smoothing Kernel\nkernel
+        \                 Smoothing Kernel Objects\nkmeans                  K-Means
+        Clustering\nkruskal.test            Kruskal-Wallis Rank Sum Test\nks.test
+        \                Kolmogorov-Smirnov Tests\nksmooth                 Kernel
+        Regression Smoother\nlag                     Lag a Time Series\nlag.plot                Time
+        Series Lag Plots\nline                    Robust Line Fitting\nlm                      Fitting
+        Linear Models\nlm.fit                  Fitter Functions for Linear Models\nlm.influence
+        \           Regression Diagnostics\nloadings                Print Loadings
+        in Factor Analysis\nloess                   Local Polynomial Regression Fitting\nloess.control
+        \          Set Parameters for Loess\nlogLik                  Extract Log-Likelihood\nloglin
+        \                 Fitting Log-Linear Models\nlowess                  Scatter
+        Plot Smoothing\nls.diag                 Compute Diagnostics for 'lsfit' Regression\n
+        \                       Results\nls.print                Print 'lsfit' Regression
+        Results\nlsfit                   Find the Least Squares Fit\nmad                     Median
+        Absolute Deviation\nmahalanobis             Mahalanobis Distance\nmake.link
+        \              Create a Link for GLM Families\nmakepredictcall         Utility
+        Function for Safe Prediction\nmanova                  Multivariate Analysis
+        of Variance\nmantelhaen.test         Cochran-Mantel-Haenszel Chi-Squared Test
+        for\n                        Count Data\nmauchly.test            Mauchly's
+        Test of Sphericity\nmcnemar.test            McNemar's Chi-squared Test for
+        Count Data\nmedian                  Median Value\nmedpolish               Median
+        Polish of a Matrix\nmodel.extract           Extract Components from a Model
+        Frame\nmodel.frame             Extracting the Model Frame from a Formula or\n
+        \                       Fit\nmodel.matrix            Construct Design Matrices\nmodel.tables
+        \           Compute Tables of Results from an Aov Model Fit\nmonthplot               Plot
+        a Seasonal or other Subseries from a Time\n                        Series\nmood.test
+        \              Mood Two-Sample Test of Scale\nna.action               NA Action\nna.contiguous
+        \          Find Longest Contiguous Stretch of non-NAs\nna.fail                 Handle
+        Missing Values in Objects\nnaprint                 Adjust for Missing Values\nnaresid
+        \                Adjust for Missing Values\nnextn                   Highly
+        Composite Numbers\nnlm                     Non-Linear Minimization\nnlminb
+        \                 Optimization using PORT routines\nnls                     Nonlinear
+        Least Squares\nnls.control             Control the Iterations in nls\nnobs
+        \                   Extract the Number of Observations from a Fit.\nnumericDeriv
+        \           Evaluate Derivatives Numerically\noffset                  Include
+        an Offset in a Model Formula\noneway.test             Test for Equal Means
+        in a One-Way Layout\noptim                   General-purpose Optimization\noptimize
+        \               One Dimensional Optimization\norder.dendrogram        Ordering
+        or Labels of the Leaves in a\n                        Dendrogram\np.adjust
+        \               Adjust P-values for Multiple Comparisons\npairwise.prop.test
+        \     Pairwise comparisons for proportions\npairwise.t.test         Pairwise
+        t tests\npairwise.table          Tabulate p values for pairwise comparisons\npairwise.wilcox.test
+        \   Pairwise Wilcoxon Rank Sum Tests\nplot.HoltWinters        Plot function
+        for HoltWinters objects\nplot.acf                Plot Autocovariance and Autocorrelation\n
+        \                       Functions\nplot.density            Plot Method for
+        Kernel Density Estimation\nplot.isoreg             Plot Method for isoreg
+        Objects\nplot.lm                 Plot Diagnostics for an lm Object\nplot.ppr
+        \               Plot Ridge Functions for Projection Pursuit\n                        Regression
+        Fit\nplot.profile.nls        Plot a profile.nls Object\nplot.spec               Plotting
+        Spectral Densities\nplot.stepfun            Plot Step Functions\nplot.stl
+        \               Methods for STL Objects\nplot.ts                 Plotting
+        Time-Series Objects\npoisson.test            Exact Poisson tests\npoly                    Compute
+        Orthogonal Polynomials\npower                   Create a Power Link Object\npower.anova.test
+        \       Power Calculations for Balanced One-Way\n                        Analysis
+        of Variance Tests\npower.prop.test         Power Calculations for Two-Sample
+        Test for\n                        Proportions\npower.t.test            Power
+        calculations for one and two sample t\n                        tests\nppoints
+        \                Ordinates for Probability Plotting\nppr                     Projection
+        Pursuit Regression\nprcomp                  Principal Components Analysis\npredict
+        \                Model Predictions\npredict.Arima           Forecast from
+        ARIMA fits\npredict.HoltWinters     Prediction Function for Fitted Holt-Winters\n
+        \                       Models\npredict.glm             Predict Method for
+        GLM Fits\npredict.lm              Predict method for Linear Model Fits\npredict.loess
+        \          Predict Loess Curve or Surface\npredict.nls             Predicting
+        from Nonlinear Least Squares Fits\npredict.smooth.spline   Predict from Smoothing
+        Spline Fit\npreplot                 Pre-computations for a Plotting Object\nprincomp
+        \               Principal Components Analysis\nprint.power.htest       Print
+        method for power calculation object\nprint.ts                Printing Time-Series
+        Objects\nprintCoefmat            Print Coefficient Matrices\nprofile                 Generic
+        Function for Profiling Models\nprofile.nls             Method for Profiling
+        nls Objects\nproj                    Projections of Models\nprop.test               Test
+        of Equal or Given Proportions\nprop.trend.test         Test for trend in proportions\nqbirthday
+        \              Probability of coincidences\nqqnorm                  Quantile-Quantile
+        Plots\nquade.test              Quade Test\nquantile                Sample
+        Quantiles\nr2dtable                Random 2-way Tables with Given Marginals\nrWishart
+        \               Random Wishart Distributed Matrices\nread.ftable             Manipulate
+        Flat Contingency Tables\nrect.hclust             Draw Rectangles Around Hierarchical
+        Clusters\nrelevel                 Reorder Levels of Factor\nreorder.default
+        \        Reorder Levels of a Factor\nreorder.dendrogram      Reorder a Dendrogram\nreplications
+        \           Number of Replications of Terms\nreshape                 Reshape
+        Grouped Data\nresiduals               Extract Model Residuals\nrunmed                  Running
+        Medians - Robust Scatter Plot Smoothing\nscatter.smooth          Scatter Plot
+        with Smooth Curve Fitted by Loess\nscreeplot               Screeplots\nsd
+        \                     Standard Deviation\nse.contrast             Standard
+        Errors for Contrasts in Model Terms\nselfStart               Construct Self-starting
+        Nonlinear Models\nsetNames                Set the Names in an Object\nshapiro.test
+        \           Shapiro-Wilk Normality Test\nsimulate                Simulate
+        Responses\nsmooth                  Tukey's (Running Median) Smoothing\nsmooth.spline
+        \          Fit a Smoothing Spline\nsmoothEnds              End Points Smoothing
+        (for Running Medians)\nsortedXyData            Create a 'sortedXyData' Object\nspec.ar
+        \                Estimate Spectral Density of a Time Series from\n                        AR
+        Fit\nspec.pgram              Estimate Spectral Density of a Time Series by
+        a\n                        Smoothed Periodogram\nspec.taper              Taper
+        a Time Series by a Cosine Bell\nspectrum                Spectral Density Estimation\nsplinefun
+        \              Interpolating Splines\nstart                   Encode the Terminal
+        Times of Time Series\nstat.anova              GLM Anova Statistics\nstats-deprecated
+        \       Deprecated Functions in Package 'stats'\nstats-package           The
+        R Stats Package\nstep                    Choose a model by AIC in a Stepwise
+        Algorithm\nstepfun                 Step Function Class\nstl                     Seasonal
+        Decomposition of Time Series by Loess\nsummary.aov             Summarize an
+        Analysis of Variance Model\nsummary.glm             Summarizing Generalized
+        Linear Model Fits\nsummary.lm              Summarizing Linear Model Fits\nsummary.manova
+        \         Summary Method for Multivariate Analysis of\n                        Variance\nsummary.nls
+        \            Summarizing Non-Linear Least-Squares Model Fits\nsummary.princomp
+        \       Summary method for Principal Components\n                        Analysis\nsupsmu
+        \                 Friedman's SuperSmoother\nsymnum                  Symbolic
+        Number Coding\nt.test                  Student's t-Test\ntermplot                Plot
+        Regression Terms\nterms                   Model Terms\nterms.formula           Construct
+        a terms Object from a Formula\nterms.object            Description of Terms
+        Objects\ntime                    Sampling Times of Time Series\ntoeplitz                Form
+        Symmetric Toeplitz Matrix\nts                      Time-Series Objects\nts.plot
+        \                Plot Multiple Time Series\nts.union                Bind Two
+        or More Time Series\ntsSmooth                Use Fixed-Interval Smoothing
+        on Time Series\ntsdiag                  Diagnostic Plots for Time-Series Fits\ntsp
+        \                    Tsp Attribute of Time-Series-like Objects\nuniroot                 One
+        Dimensional Root (Zero) Finding\nupdate                  Update and Re-fit
+        a Model Call\nupdate.formula          Model Updating\nvar.test                F
+        Test to Compare Two Variances\nvarimax                 Rotation Methods for
+        Factor Analysis\nvcov                    Calculate Variance-Covariance Matrix
+        for a\n                        Fitted Model Object\nweighted.mean           Weighted
+        Arithmetic Mean\nweighted.residuals      Compute Weighted Residuals\nweights
+        \                Extract Model Weights\nwilcox.test             Wilcoxon Rank
+        Sum and Signed Rank Tests\nwindow                  Time Windows\nxtabs                   Cross
+        Tabulation\n"
+    http_version: 
+  recorded_at: Tue, 05 Nov 2013 10:22:13 GMT
+recorded_with: VCR 2.7.0

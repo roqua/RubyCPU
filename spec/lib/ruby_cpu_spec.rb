@@ -22,7 +22,7 @@ describe "An instance of", RubyCpu do
     expect(@calculation_request).to be_a(CalculationRequest)
   end
 
-  context "success" do
+  context "success", vcr: true do
     it "returns information of a package" do
       data = @ruby_cpu.info @ocpu_package
       data.should be_a(String)
@@ -30,6 +30,7 @@ describe "An instance of", RubyCpu do
     end
 
     it "returns a list of packages" do
+
       result = @ruby_cpu.library
       expect(result).to be_a(Array)
       expect(result).not_to be_empty

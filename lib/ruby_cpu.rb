@@ -1,15 +1,14 @@
+require 'rest_client'
+require 'json'
+require 'virtus'
+
+require 'ruby_cpu/models/calculation_request'
+require 'ruby_cpu/models/ocpu_callback'
+require 'ruby_cpu/models/ocpu_package'
+
+require 'ruby_cpu/core_ext'
+
 class RubyCpu
-  require 'rest_client'
-  require 'json'
-
-  require 'ruby_cpu/models/calculation_request'
-  require 'ruby_cpu/models/ocpu_callback'
-  require 'ruby_cpu/models/ocpu_package'
-
-  require 'ruby_cpu/core_ext'
-
-  require 'ruby_cpu/enums/return_type_enum'
-
   OCPU_PATH = "ocpu"
   LIBRARY_PATH = "library"
   LANGUAGE = "R"
@@ -18,13 +17,11 @@ class RubyCpu
     # Remove the trailing slash, if present
     serviceLocation.trim! "/"
     @service_location = serviceLocation
-
   end
 
   ##
   # Returns a list of package objects, retrieved from the OpenCPU server
   def library
-    # Rails.logger.debug([@service_location, OCPU_PATH, LIBRARY_PATH].join("/"))
     packages = RestClient.get [@service_location, OCPU_PATH, LIBRARY_PATH].join("/")
     OcpuPackage.build_from_list packages
   end
@@ -40,7 +37,7 @@ class RubyCpu
   # Calls the given server, with the +calculation_request+ and directly returns the data
   def calculate_and_retrieve calculation_request
     data = calculate calculation_request
-    retrieve_result data, ReturnTypeEnum::JSON
+    retrieve_result data
   end
 
   ##
@@ -63,12 +60,8 @@ class RubyCpu
   # OpenCPU first wants to store the data locally, in order to improve caching.
   # When the call is performed, one gets a callback URL on which a get request
   # should be performed. This is done in this method.
-  def retrieve_result session, return_type
-    result = "{}"
-    if session.is_a? OcpuCallback
-      result = JSON.parse(RestClient.get [@service_location, session.value, return_type].join("/"))
-    end
-    result
+  def retrieve_result session
+    JSON.parse(RestClient.get [@service_location, session.value, 'json'].join("/"))
   end
 
 end

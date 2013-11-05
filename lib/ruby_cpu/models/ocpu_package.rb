@@ -1,17 +1,13 @@
 class OcpuPackage
-
   attr_accessor :name
 
-  def self.build_from_list package_list
-    package_list = package_list.split(" ")
-    packages = []
-    package_list.each do |package|
-      current_package = new
-      current_package.name = package
-      packages << current_package
-    end
-
-    packages
+  def initialize name
+    @name = name
   end
 
+  def self.build_from_list package_list
+    package_list.split(" ").map do |package_string|
+      new(package_string)
+    end
+  end
 end

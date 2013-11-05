@@ -9,8 +9,7 @@ describe "An instance of", RubyCpu do
     @calculation_request.data = '{"x":[1,4,2,3,5,3], "y":[1,6,7,5,4,3]}'
     @correlation = [0.32733]
 
-    @ocpu_package = OcpuPackage.new
-    @ocpu_package.name = @calculation_request.package
+    @ocpu_package = OcpuPackage.new(@calculation_request.package)
   end
 
   before :each do
@@ -49,7 +48,7 @@ describe "An instance of", RubyCpu do
 
     it "should retrieve the correct results" do
       @callback = @ruby_cpu.calculate @calculation_request
-      result = @ruby_cpu.retrieve_result @callback, "json"
+      result = @ruby_cpu.retrieve_result @callback
       expect(result).to eq(@correlation)
     end
 

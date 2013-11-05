@@ -2,11 +2,19 @@ PATH
   remote: .
   specs:
     ruby_cpu (0.0.1)
+      virtus (~> 1.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (1.1.0)
+    axiom-types (0.0.5)
+      descendants_tracker (~> 0.0.1)
+      ice_nine (~> 0.9)
+    backports (3.3.5)
+    coercible (0.2.0)
+      backports (~> 3.0, >= 3.1.0)
+      descendants_tracker (~> 0.0.1)
     colorize (0.5.8)
     coveralls (0.6.7)
       colorize
@@ -14,7 +22,10 @@ GEM
       rest-client
       simplecov (>= 0.7)
       thor
+    descendants_tracker (0.0.3)
     diff-lcs (1.2.4)
+    equalizer (0.0.7)
+    ice_nine (0.10.0)
     mime-types (1.25)
     multi_json (1.8.2)
     parser (2.0.0)
@@ -43,6 +54,11 @@ GEM
     simplecov-html (0.7.1)
     slop (3.4.6)
     thor (0.18.1)
+    virtus (1.0.0)
+      axiom-types (~> 0.0.5)
+      coercible (~> 0.2)
+      descendants_tracker (~> 0.0.1)
+      equalizer (~> 0.0.7)
 
 PLATFORMS
   ruby

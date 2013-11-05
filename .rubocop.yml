@@ -1,5 +1,3 @@
-inherit_from: rubocop-todo.yml
-
 AllCops:
   Excludes:
     - 'bin/*'
@@ -35,4 +33,7 @@ DefWithoutParentheses:
   Enabled: false
 
 Documentation:
+  Enabled: false
+
+FinalNewline:
   Enabled: false

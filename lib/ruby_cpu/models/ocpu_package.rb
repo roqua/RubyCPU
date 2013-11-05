@@ -4,7 +4,7 @@ class OcpuPackage
 
   def self.build_from_list package_list
     package_list = package_list.split(" ")
-    packages = Array.new
+    packages = []
     package_list.each do |package|
       current_package = new
       current_package.name = package

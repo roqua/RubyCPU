@@ -2,26 +2,3 @@
 # The point is for the user to remove these configuration records
 # one by one as the offences are removed from the code base.
 
-EmptyLiteral:
-  Enabled: false
-
-FinalNewline:
-  Enabled: false
-
-IndentationWidth:
-  Enabled: false
-
-MultilineIfThen:
-  Enabled: false
-
-RedundantBegin:
-  Enabled: false
-
-RedundantSelf:
-  Enabled: false
-
-# Tab:
-#   Enabled: false
-
-TrailingWhitespace:
-  Enabled: false
